@@ -24,4 +24,11 @@
         <item name="textInputStyle">@style/Widget.Fincurr.TextInput</item>
         <item name="materialButtonStyle">@style/Widget.Fincurr.Button</item>
     </style>
+
+    <!-- Splash Screen Theme -->
+    <style name="Theme.Fincurr.Starting" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/colorBackground</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_app_logo</item>
+        <item name="postSplashScreenTheme">@style/Theme.Fincurr</item>
+    </style>
 </resources>

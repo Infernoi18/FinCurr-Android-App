@@ -14,9 +14,16 @@
 
         <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="140dp"
+            android:layout_height="180dp"
             android:background="@drawable/bg_card_gradient_purple"
             android:padding="@dimen/spacing_lg">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="top|center_horizontal"
+                android:src="@drawable/ic_app_logo"
+                android:contentDescription="@string/app_name" />
 
             <TextView
                 android:layout_width="wrap_content"
