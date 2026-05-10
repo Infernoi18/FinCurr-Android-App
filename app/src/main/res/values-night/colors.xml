@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#60A5FA</color>
+    <color name="colorOnPrimary">#0B1220</color>
+    <color name="colorSecondary">#A78BFA</color>
+    <color name="colorOnSecondary">#0B1220</color>
+    <color name="colorTertiary">#34D399</color>
+    <color name="colorOnTertiary">#0B1220</color>
+    <color name="colorBackground">#0B1220</color>
+    <color name="colorOnBackground">#E5E7EB</color>
+    <color name="colorSurface">#111827</color>
+    <color name="colorOnSurface">#F9FAFB</color>
+    <color name="colorSurfaceVariant">#1F2937</color>
+    <color name="colorOnSurfaceVariant">#9CA3AF</color>
+    <color name="colorOutline">#374151</color>
+    <color name="colorError">#F87171</color>
+    <color name="colorOnError">#0B1220</color>
+    <color name="colorSuccess">#22C55E</color>
+    <color name="colorWarning">#FBBF24</color>
+    <color name="colorInfo">#93C5FD</color>
+    <color name="gradientBlueStart">#1D4ED8</color>
+    <color name="gradientBlueEnd">#38BDF8</color>
+    <color name="gradientPurpleStart">#7C3AED</color>
+    <color name="gradientPurpleEnd">#C084FC</color>
+    <color name="gradientGreenStart">#059669</color>
+    <color name="gradientGreenEnd">#34D399</color>
+    <color name="textMuted">#9CA3AF</color>
+    <color name="chipBackground">#374151</color>
+</resources>

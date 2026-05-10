@@ -1,0 +1,109 @@
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.fincurr.ui.auth.LoginFragment"
+        android:label="@string/login">
+        <action
+            android:id="@+id/action_loginFragment_to_signupFragment"
+            app:destination="@id/signupFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_pinVerifyFragment"
+            app:destination="@id/pinVerifyFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_pinSetupFragment"
+            app:destination="@id/pinSetupFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/signupFragment"
+        android:name="com.example.fincurr.ui.auth.SignupFragment"
+        android:label="@string/signup">
+        <action
+            android:id="@+id/action_signupFragment_to_pinSetupFragment"
+            app:destination="@id/pinSetupFragment" />
+        <action
+            android:id="@+id/action_signupFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/pinSetupFragment"
+        android:name="com.example.fincurr.ui.auth.PinSetupFragment"
+        android:label="@string/setup_pin">
+        <action
+            android:id="@+id/action_pinSetupFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/pinVerifyFragment"
+        android:name="com.example.fincurr.ui.auth.PinVerifyFragment"
+        android:label="@string/verify_pin">
+        <action
+            android:id="@+id/action_pinVerifyFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.fincurr.ui.home.HomeFragment"
+        android:label="@string/dashboard">
+        <action
+            android:id="@+id/action_homeFragment_to_budgetFragment"
+            app:destination="@id/budgetFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/walletFragment"
+        android:name="com.example.fincurr.ui.wallet.WalletFragment"
+        android:label="@string/wallet" />
+
+    <fragment
+        android:id="@+id/transactionsFragment"
+        android:name="com.example.fincurr.ui.transaction.TransactionsFragment"
+        android:label="@string/transactions">
+        <action
+            android:id="@+id/action_transactionsFragment_to_transactionDetailFragment"
+            app:destination="@id/transactionDetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/transactionDetailFragment"
+        android:name="com.example.fincurr.ui.transaction.TransactionDetailFragment"
+        android:label="@string/transaction_details">
+        <argument
+            android:name="transactionId"
+            app:argType="long" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/insightsFragment"
+        android:name="com.example.fincurr.ui.insights.InsightsFragment"
+        android:label="@string/insights" />
+
+    <fragment
+        android:id="@+id/budgetFragment"
+        android:name="com.example.fincurr.ui.budget.BudgetFragment"
+        android:label="@string/budget" />
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.fincurr.ui.profile.ProfileFragment"
+        android:label="@string/profile">
+        <action
+            android:id="@+id/action_profileFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.fincurr.ui.settings.SettingsFragment"
+        android:label="@string/settings" />
+</navigation>

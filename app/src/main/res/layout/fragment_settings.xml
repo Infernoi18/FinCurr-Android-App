@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorBackground"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/spacing_lg">
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/switchDarkMode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/dark_mode" />
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/switchNotifications"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_md"
+            android:text="@string/notifications" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/inputCurrency"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_lg"
+            android:hint="@string/currency">
+
+            <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                android:id="@+id/dropCurrency"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="none" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnLogout"
+            style="?attr/materialButtonOutlinedStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_lg"
+            android:text="@string/logout" />
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

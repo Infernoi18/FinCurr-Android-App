@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.Fincurr" parent="Theme.Material3.DayNight.NoActionBar">
+
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorOnPrimary">@color/colorOnPrimary</item>
+
+        <item name="colorSecondary">@color/colorSecondary</item>
+        <item name="colorOnSecondary">@color/colorOnSecondary</item>
+
+        <item name="colorTertiary">@color/colorTertiary</item>
+        <item name="colorOnTertiary">@color/colorOnTertiary</item>
+
+        <item name="android:statusBarColor">@color/colorPrimary</item>
+        <item name="android:navigationBarColor">@color/colorSurface</item>
+
+    </style>
+
+    <style name="Widget.Fincurr.Card" parent="Widget.Material3.CardView.Elevated">
+        <item name="cardCornerRadius">18dp</item>
+    </style>
+
+    <style name="Widget.Fincurr.Chip" parent="Widget.Material3.Chip.Assist">
+        <item name="chipCornerRadius">12dp</item>
+    </style>
+
+    <style name="Widget.Fincurr.TextInput" parent="Widget.Material3.TextInputLayout.OutlinedBox">
+        <item name="boxCornerRadiusTopStart">16dp</item>
+        <item name="boxCornerRadiusTopEnd">16dp</item>
+        <item name="boxCornerRadiusBottomStart">16dp</item>
+        <item name="boxCornerRadiusBottomEnd">16dp</item>
+    </style>
+
+    <style name="Widget.Fincurr.Button" parent="Widget.Material3.Button">
+        <item name="cornerRadius">18dp</item>
+    </style>
+
+</resources>
