@@ -14,6 +14,7 @@ data class AuthState(
     val error: String? = null,
     val user: UserEntity? = null,
     val signedUp: Boolean = false,
+    val loginSucceeded: Boolean = false,
     val pinSet: Boolean = false,
     val pinVerified: Boolean = false
 )
@@ -32,14 +33,25 @@ class AuthViewModel(private val repository: AuthRepository) : ViewModel() {
 
     fun login(email: String, password: String) {
         viewModelScope.launch {
-            _state.value = _state.value.copy(loading = true, error = null)
+            _state.value = _state.value.copy(
+                loading = true,
+                error = null,
+                user = null,
+                loginSucceeded = false,
+                pinSet = false
+            )
             val user = repository.login(email, password)
             if (user == null) {
-                _state.value = _state.value.copy(loading = false, error = "Invalid credentials")
+                _state.value = _state.value.copy(
+                    loading = false,
+                    error = "Invalid credentials",
+                    loginSucceeded = false
+                )
             } else {
                 _state.value = _state.value.copy(
                     loading = false,
                     user = user,
+                    loginSucceeded = true,
                     pinSet = !user.pinHash.isNullOrBlank()
                 )
             }
@@ -49,7 +61,11 @@ class AuthViewModel(private val repository: AuthRepository) : ViewModel() {
     fun loadUser() {
         viewModelScope.launch {
             val user = repository.getUser()
-            _state.value = _state.value.copy(user = user, pinSet = !user?.pinHash.isNullOrBlank())
+            _state.value = _state.value.copy(
+                user = user,
+                pinSet = !user?.pinHash.isNullOrBlank(),
+                loginSucceeded = false
+            )
         }
     }
 

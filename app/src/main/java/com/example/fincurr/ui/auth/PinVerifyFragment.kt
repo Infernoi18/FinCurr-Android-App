@@ -58,7 +58,7 @@ class PinVerifyFragment : Fragment() {
                 viewModel.state.collect { state ->
                     if (state.pinVerified) {
                         val navOptions = NavOptions.Builder().setPopUpTo(R.id.nav_graph, true).build()
-                        findNavController().navigate(R.id.homeFragment, null, navOptions)
+                        findNavController().navigate(R.id.action_pinVerifyFragment_to_homeFragment, null, navOptions)
                     }
                     if (state.error != null) {
                         Snackbar.make(binding.root, state.error, Snackbar.LENGTH_SHORT).show()
@@ -86,7 +86,15 @@ class PinVerifyFragment : Fragment() {
                 override fun onAuthenticationSucceeded(result: BiometricPrompt.AuthenticationResult) {
                     viewModel.completeLogin()
                     val navOptions = NavOptions.Builder().setPopUpTo(R.id.nav_graph, true).build()
-                    findNavController().navigate(R.id.homeFragment, null, navOptions)
+                    findNavController().navigate(R.id.action_pinVerifyFragment_to_homeFragment, null, navOptions)
+                }
+
+                override fun onAuthenticationError(errorCode: Int, errString: CharSequence) {
+                    Snackbar.make(binding.root, errString, Snackbar.LENGTH_SHORT).show()
+                }
+
+                override fun onAuthenticationFailed() {
+                    Snackbar.make(binding.root, "Biometric verification failed", Snackbar.LENGTH_SHORT).show()
                 }
             })
         biometricPrompt.authenticate(promptInfo)
